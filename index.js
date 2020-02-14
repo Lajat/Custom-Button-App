@@ -41,9 +41,11 @@ paddingBottom.onclick = function() {
     if(paddingBottom.value === 'Padding Bottom')
     paddingBottom.value = "0px";
     btn.style.paddingBottom = paddingBottom.value;
+    // paddingBottomClicked = true;
 }
 paddingBottom.onkeyup = function() {
     btn.style.paddingBottom = paddingBottom.value;
+    // paddingBottomClicked = true;
 }
 
 paddingLeft.onclick = function() {
@@ -90,6 +92,16 @@ var codeGen = document.getElementById("codeGenerated");
 
 code.onclick = function () {
     codeGen.innerHTML = "";
+
+    // if(btn.style.paddingTop == "")
+    // btn.style.paddingTop = "0px";
+    // if(btn.style.paddingRight == "")
+    // btn.style.paddingRight = "0px";
+    // if(btn.style.paddingBottom === "")
+    // btn.style.paddingBottom = "0px";
+    // if(btn.style.paddingLeft == "")
+    // btn.style.paddingLeft = "0px";
+
     var htmlDataWrapper = document.createElement('div');
     var heading1 = document.createElement('h3');
     heading1.innerHTML = "HTML Codes:";
@@ -108,11 +120,23 @@ code.onclick = function () {
     var fc = document.createElement('p');
     fc.innerHTML = "color:" + btn.style.color + ";";
 
-    var pding = document.createElement('p');
-    pding.innerHTML = "padding:" + btn.style.paddingTop + " " + btn.style.paddingRight + " "  + btn.style.paddingLeft + " "   + btn.style.paddingBottom + ";";
+    var pdingTop = document.createElement('p');
+    // pding.innerHTML = "padding:" + btn.style.paddingTop + " " + btn.style.paddingRight + " "  + btn.style.paddingBottom + " "   + btn.style.paddingLeft + ";";
+    pdingTop.innerHTML = "padding-top: " + btn.style.paddingTop + ";";
+    var pdingRight =  document.createElement('p');
+    pdingRight.innerHTML = "padding-right: " + btn.style.paddingRight + ";";
+    var pdingBottom = document.createElement('p');
+    pdingBottom.innerHTML = "padding-bottom: " + btn.style.paddingBottom + ";";
+    var pdingLeft =  document.createElement('p');
+    pdingLeft.innerHTML = "padding-left: " + btn.style.paddingLeft + ";";
 
-    var bdr =document.createElement('p');
-    bdr.innerHTML = "border:" + btn.style.borderWidth + " " + btn.style.borderStyle + " " + btn.style.borderColor + ";";
+    var bdrWidth =document.createElement('p');
+    // bdr.innerHTML = "border:" + btn.style.borderWidth + " " + btn.style.borderStyle + " " + btn.style.borderColor + ";";
+    bdrWidth.innerHTML = "border-width: " + btn.style.borderWidth + ";";
+    var bdrStyle = document.createElement('p');
+    bdrStyle.innerHTML = "border-style: " + btn.style.borderStyle + ";";
+    var bdrColour = document.createElement('p');
+    bdrColour.innerHTML = "border-color: " + btn.style.borderColor + ";";
 
     var btnc = document.createElement('p');
     btnc.innerHTML = "background-color:" + btn.style.backgroundColor + ";";
@@ -120,8 +144,13 @@ code.onclick = function () {
     cssDataWrapper.appendChild(fs);
     cssDataWrapper.appendChild(fc);
     cssDataWrapper.appendChild(btnc);
-    cssDataWrapper.appendChild(pding);
-    cssDataWrapper.appendChild(bdr);
+    cssDataWrapper.appendChild(pdingTop);
+    cssDataWrapper.appendChild(pdingRight);
+    cssDataWrapper.appendChild(pdingBottom);
+    cssDataWrapper.appendChild(pdingLeft);
+    cssDataWrapper.appendChild(bdrWidth);
+    cssDataWrapper.appendChild(bdrStyle);
+    cssDataWrapper.appendChild(bdrColour);
 
     codeGen.appendChild(htmlDataWrapper);
     codeGen.appendChild(cssDataWrapper);
