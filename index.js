@@ -11,7 +11,7 @@ inputBtn.onclick= function() {
     // }
     btn.innerHTML = inputBtn.value;
 }
-inputBtn.onchange= function() {
+inputBtn.onkeyup= function() {
     // console.log(e.key);
     // if(e.key === 'Enter') {
     //     inputBtn.style.display = "none";
@@ -24,7 +24,7 @@ paddingTop.onclick = function() {
     paddingTop.value = "0px";
     btn.style.paddingTop = paddingTop.value;
 }
-paddingTop.onchange = function() {
+paddingTop.onkeyup = function() {
     btn.style.paddingTop = paddingTop.value;
 }
 
@@ -33,7 +33,7 @@ paddingRight.onclick = function() {
     paddingRight.value = "0px";
     btn.style.paddingRight = paddingRight.value;
 }
-paddingRight.onchange = function() {
+paddingRight.onkeyup = function() {
     btn.style.paddingRight = paddingRight.value;
 }
 
@@ -42,7 +42,7 @@ paddingBottom.onclick = function() {
     paddingBottom.value = "0px";
     btn.style.paddingBottom = paddingBottom.value;
 }
-paddingBottom.onchange = function() {
+paddingBottom.onkeyup = function() {
     btn.style.paddingBottom = paddingBottom.value;
 }
 
@@ -51,7 +51,7 @@ paddingLeft.onclick = function() {
     paddingLeft.value = "0px";
     btn.style.paddingLeft = paddingLeft.value;
 }
-paddingLeft.onchange = function() {
+paddingLeft.onkeyup = function() {
     btn.style.paddingLeft = paddingLeft.value;
 }
 
@@ -68,12 +68,21 @@ borderColour.onchange = function() {
 textSize.onchange = function() {
     btn.style.fontSize = textSize.value + "px";
 }
+textSize.onkeyup = function() {
+    btn.style.fontSize = textSize.value + "px";
+}
 
 borderSize.onchange = function() {
     btn.style.borderWidth = borderSize.value + "px";
 }
+borderSize.onkeyup = function() {
+    btn.style.borderWidth = borderSize.value + "px";
+}
 
 borderStyleData.onchange = function () {
+    btn.style.borderStyle = borderStyleData.value;
+}
+borderStyleData.onkeyup = function () {
     btn.style.borderStyle = borderStyleData.value;
 }
 
