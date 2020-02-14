@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Button</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/100/000000/button2.png"/>
+</head>
+<body>
+    <h3 id="code">Generate Code</h3>
+    <div id="codeGenerated"></div>
+    <div id="main">
+        <h3 style="margin-bottom: 0px;">Custom Button</h3>
+        <div id="wrapper">
+            <button id ="btn"></button>
+            <!-- <input id ="btn" type="submit" value="Your's Custom Button"> -->
+        </div>
+        <h3>Edit</p>
+        <div id="content-wrapper">
+            <div id="borderREPR">
+                <div id="padding"></div>
+                    <input id ="paddingTop" type="text" value="Padding Top">
+                    <input id ="paddingRight"type="text" value="Padding Right">
+                    <input id ="paddingBottom"type="text" value="Padding Bottom">
+                    <input id ="paddingLeft"type="text" value="Padding Left">
+                    <input id="input-btn" type="text" value="Button's Name">
+            </div>
+            <div id ="size-style-wrapper">
+                <div>Text Size
+                    <input id="textSize" type="number" min="0">
+                </div>
+
+                <div>Border Size
+                <input id="borderSize" type="number" min="0">
+                </div>
+                
+                <form>Border Style
+                    <input id="borderStyleData"  list="Border-Style"/>
+                    <datalist id ="Border-Style">
+                        <option>solid</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                        <option>hidden</option>
+                        <option>none</option>
+                    </datalist>
+                </form>
+            </div>
+            <div id ="color-wrapper">
+                <div>Text's Colour <input id ="textColour" class="colour" type="color"></div>
+                <div>Button's Colour <input id ="btnColour" type="color"></div>
+                <div>Border's Colour <input id ="borderColour" type="color"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
