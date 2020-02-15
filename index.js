@@ -154,4 +154,9 @@ code.onclick = function () {
 
     codeGen.appendChild(htmlDataWrapper);
     codeGen.appendChild(cssDataWrapper);
+    codeGen.style.display = "block";
+}
+
+main.onclick = function() {
+    codeGen.style.display = "none";
 }
