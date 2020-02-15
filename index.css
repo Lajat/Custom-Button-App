@@ -150,6 +150,10 @@ body {
     align-items: center;
     height: 100px;
 }
-.colour {
+.text-color-styling {
     margin-left: 20px;
+    cursor: pointer;
+}
+.btn-color-styling{
+    cursor: pointer;
 }
