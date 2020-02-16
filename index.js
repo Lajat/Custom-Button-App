@@ -107,13 +107,15 @@ code.onclick = function () {
     heading1.innerHTML = "HTML Codes:";
 
     var htmlData = document.createElement('p');
-    htmlData.innerText = "<button>" + btn.innerHTML + "</button>";
+    htmlData.innerText = "<button class=\"btn\">" + btn.innerHTML + "</button>";
     htmlDataWrapper.appendChild(heading1);
     htmlDataWrapper.appendChild(htmlData);
 
     var cssDataWrapper = document.createElement('div');
     var heading2 = document.createElement('h3');
     heading2.innerHTML = "CSS Codes:";
+    var classbtnStart = document.createElement('p');
+    classbtnStart.innerHTML = ".btn {";
     var fs = document.createElement('p');
     fs.innerHTML = "font-size:" + btn.style.fontSize + ";";
 
@@ -140,7 +142,10 @@ code.onclick = function () {
 
     var btnc = document.createElement('p');
     btnc.innerHTML = "background-color:" + btn.style.backgroundColor + ";";
+    var classbtnEnd = document.createElement('p');
+    classbtnEnd.innerHTML = "}";
     cssDataWrapper.appendChild(heading2);
+    cssDataWrapper.appendChild(classbtnStart);
     cssDataWrapper.appendChild(fs);
     cssDataWrapper.appendChild(fc);
     cssDataWrapper.appendChild(btnc);
@@ -151,6 +156,7 @@ code.onclick = function () {
     cssDataWrapper.appendChild(bdrWidth);
     cssDataWrapper.appendChild(bdrStyle);
     cssDataWrapper.appendChild(bdrColour);
+    cssDataWrapper.appendChild(classbtnEnd);
 
     codeGen.appendChild(htmlDataWrapper);
     codeGen.appendChild(cssDataWrapper);
