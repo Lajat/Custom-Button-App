@@ -27,7 +27,8 @@ body {
     width: 700px;
     height: 500px;
     margin: 100px auto;
-    /* overflow: hidden; */
+    background-color: rgba(255,223,238,0.2);
+    padding: 20px;
 }
 #wrapper {
     width: 700px;
